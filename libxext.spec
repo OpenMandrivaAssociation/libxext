@@ -48,7 +48,7 @@ Development files for %{name}
 %{_libdir}/libXext.so
 %{_libdir}/libXext.la
 %{_libdir}/pkgconfig/xext.pc
-%{_mandir}/man3/*.3*.bz2
+%{_mandir}/man3/*.3*
 
 #-----------------------------------------------------------
 
