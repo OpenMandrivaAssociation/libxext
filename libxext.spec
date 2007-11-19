@@ -27,7 +27,28 @@ Conflicts: libxorg-x11 < 7.0
 Provides: %{name} = %{version}
 
 %description -n %{libxext}
-Misc X Extension Library
+LibXext provides an X Window System client interface to several extensions to
+the X protocol. 
+The supported protocol extensions are: 
+- DOUBLE-BUFFER (DBE), the Double Buffer extension;
+- DPMS, the VESA Display Power Management System extension;
+- Extended-Visual-Information (EVI), an extension for gathering extra
+  information about the X server's visuals;
+- LBX, the Low Bandwidth X extension;
+- MIT-SHM, the MIT X client/server shared memory extension;
+- MIT-SUNDRY-NONSTANDARD, a miscellaneous extension by MIT;
+- Multi-Buffering, the multi-buffering and stereo display extension;
+- SECURITY, the X security extension;
+- SHAPE, the non-rectangular shaped window extension;
+- SYNC, the X synchronization extension;
+- TOG-CUP, the Open Group's Colormap Utilization extension;
+- XC-APPGROUP, the X Consortium's Application Group extension;
+- XC-MISC, the X Consortium's resource ID querying extension;
+- XTEST, the X test extension (this is one of two client-side implementations;
+  the other is in the libXtst library, provided by the libxtst6 package);
+
+LibXext also provides a small set of utility functions to aid authors of client
+APIs for X protocol extensions.
 
 #-----------------------------------------------------------
 
