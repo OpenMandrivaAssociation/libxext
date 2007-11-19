@@ -1,6 +1,6 @@
 %define libxext %mklibname xext 6
 Name: libxext
-Summary:  Misc X Extension Library
+Summary: X11 miscellaneous extension library
 Version: 1.0.3
 Release: %mkrel 1
 Group: Development/X11
@@ -21,7 +21,7 @@ Misc X Extension Library
 #-----------------------------------------------------------
 
 %package -n %{libxext}
-Summary:  Misc X Extension Library
+Summary: X11 miscellaneous extension library
 Group: Development/X11
 Conflicts: libxorg-x11 < 7.0
 Provides: %{name} = %{version}
