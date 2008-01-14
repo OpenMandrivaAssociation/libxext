@@ -2,18 +2,18 @@
 Name: libxext
 Summary: X11 miscellaneous extension library
 Version: 1.0.3
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
 Source0: http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-root
 
-BuildRequires: libx11-devel >= 1.0.0
-BuildRequires: libxau-devel >= 1.0.0
-BuildRequires: libxdmcp-devel >= 1.0.0
-BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-util-macros >= 1.0.1
+BuildRequires: x11-util-macros		>= 1.1.5
+BuildRequires: libx11-devel		>= 1.1.3
+BuildRequires: libxdmcp-devel		>= 1.0.2
+BuildRequires: libxau-devel		>= 1.0.3
+BuildRequires: x11-proto-devel		>= 7.3
 
 %description
 Misc X Extension Library
