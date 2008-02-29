@@ -1,8 +1,8 @@
 %define libxext %mklibname xext 6
 Name: libxext
 Summary: X11 miscellaneous extension library
-Version: 1.0.3
-Release: %mkrel 2
+Version: 1.0.4
+Release: %mkrel 1
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
@@ -94,8 +94,7 @@ Static development files for %{name}
 %setup -q -n libXext-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
+%configure
 
 %make
 
