@@ -94,7 +94,7 @@ Static development files for %{name}
 %setup -q -n libXext-%{version}
 
 %build
-%configure
+%configure2_5x
 
 %make
 
