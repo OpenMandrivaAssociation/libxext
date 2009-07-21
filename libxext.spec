@@ -1,7 +1,8 @@
 %define libxext %mklibname xext 6
 Name: libxext
 Summary: X11 miscellaneous extension library
-Version: 1.0.99.3
+Epoch: 1
+Version: 1.0.5
 Release: %mkrel 1
 Group: Development/X11
 License: MIT
@@ -12,7 +13,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxau-devel >= 1.0.0
 BuildRequires: libxdmcp-devel >= 1.0.0
-BuildRequires: x11-proto-devel >= 7.4-21
+BuildRequires: x11-proto-devel >= 7.4-24
 BuildRequires: x11-util-macros >= 1.0.1
 
 %description
@@ -55,8 +56,8 @@ APIs for X protocol extensions.
 %package -n %{libxext}-devel
 Summary: Development files for %{name}
 Group: Development/X11
-Requires: %{libxext} = %{version}
-Requires: x11-proto-devel >= 7.4-21
+Requires: %{libxext} = %{epoch}:%{version}
+Requires: x11-proto-devel >= 7.4-24
 Provides: libxext-devel = %{version}-%{release}
 
 Conflicts: libxorg-x11-devel < 7.0
@@ -67,7 +68,6 @@ Development files for %{name}
 
 %files -n %{libxext}-devel
 %defattr(-,root,root)
-%{_includedir}/X11/extensions/*.h
 %{_libdir}/libXext.so
 %{_libdir}/libXext.la
 %{_libdir}/pkgconfig/xext.pc
@@ -78,7 +78,7 @@ Development files for %{name}
 %package -n %{libxext}-static-devel
 Summary: Static development files for %{name}
 Group: Development/X11
-Requires: %{libxext}-devel = %{version}
+Requires: %{libxext}-devel = %{epoch}:%{version}
 Provides: libxext-static-devel = %{version}-%{release}
 
 Conflicts: libxorg-x11-static-devel < 7.0
