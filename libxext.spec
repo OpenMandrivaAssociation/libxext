@@ -2,7 +2,7 @@
 Name: libxext
 Summary: X11 miscellaneous extension library
 Epoch: 1
-Version: 1.0.5
+Version: 1.1.1
 Release: %mkrel 1
 Group: Development/X11
 License: MIT
@@ -13,7 +13,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxau-devel >= 1.0.0
 BuildRequires: libxdmcp-devel >= 1.0.0
-BuildRequires: x11-proto-devel >= 7.4-24
+BuildRequires: x11-proto-devel >= 7.5
 BuildRequires: x11-util-macros >= 1.0.1
 
 %description
@@ -57,11 +57,11 @@ APIs for X protocol extensions.
 Summary: Development files for %{name}
 Group: Development/X11
 Requires: %{libxext} = %{epoch}:%{version}
-Requires: x11-proto-devel >= 7.4-24
+Requires: x11-proto-devel >= 7.5
 Provides: libxext-devel = %{version}-%{release}
 
 Conflicts: libxorg-x11-devel < 7.0
-Conflicts: x11-proto-devel < 7.4-21
+Conflicts: x11-proto-devel < 7.5
 
 %description -n %{libxext}-devel
 Development files for %{name}
@@ -71,6 +71,7 @@ Development files for %{name}
 %{_libdir}/libXext.so
 %{_libdir}/libXext.la
 %{_libdir}/pkgconfig/xext.pc
+%{_includedir}/X11/extensions/*.h
 %{_mandir}/man3/*.3*
 
 #-----------------------------------------------------------
