@@ -8,7 +8,6 @@ Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
 Source0: http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-Patch0: libXext-1.1.1-drop-conflict-files.patch
 BuildRoot: %{_tmppath}/%{name}-root
 
 BuildRequires: libx11-devel >= 1.0.0
@@ -96,7 +95,6 @@ Static development files for %{name}
 
 %prep
 %setup -q -n libXext-%{version}
-%patch0 -p0
 
 %build
 autoreconf -fi
