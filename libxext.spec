@@ -104,6 +104,7 @@ autoreconf -fi
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+rm -rf %{buildroot}%_datadir/doc/libXext
 
 %clean
 rm -rf %{buildroot}
@@ -117,5 +118,6 @@ rm -rf %{buildroot}
 
 %files -n %{libxext}
 %defattr(-,root,root)
+%doc specs/*.xml
 %{_libdir}/libXext.so.6
 %{_libdir}/libXext.so.6.4.0
