@@ -1,9 +1,12 @@
 %define libxext %mklibname xext 6
+%define develname %mklibname xext -d
+%define staticname %mklibname xext -s -d
+
 Name: libxext
 Summary: X11 miscellaneous extension library
 Epoch: 1
 Version: 1.2.0
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
@@ -53,20 +56,22 @@ APIs for X protocol extensions.
 
 #-----------------------------------------------------------
 
-%package -n %{libxext}-devel
+%package -n %{develname}
 Summary: Development files for %{name}
 Group: Development/X11
-Requires: %{libxext} = %{epoch}:%{version}
+Requires: %{libxext} = %{epoch}:%{version}-%{release}
 Requires: x11-proto-devel >= 7.5
 Provides: libxext-devel = %{version}-%{release}
+Provides: libxext6-devel = %{version}-%{release}
+Obsoletes: %{mklibname xext6}-devel
 
 Conflicts: libxorg-x11-devel < 7.0
 Conflicts: x11-proto-devel < 7.5
 
-%description -n %{libxext}-devel
+%description -n %{develname}
 Development files for %{name}
 
-%files -n %{libxext}-devel
+%files -n %{develname}
 %defattr(-,root,root)
 %{_libdir}/libXext.so
 %{_libdir}/libXext.la
@@ -76,18 +81,20 @@ Development files for %{name}
 
 #-----------------------------------------------------------
 
-%package -n %{libxext}-static-devel
+%package -n %{staticname}
 Summary: Static development files for %{name}
 Group: Development/X11
-Requires: %{libxext}-devel = %{epoch}:%{version}
+Requires: %{develname} = %{epoch}:%{version}-%{release}
 Provides: libxext-static-devel = %{version}-%{release}
+Provides: libxext6-static-devel = %{version}-%{release}
+Obsoletes: %{mklibname xext6}-static-devel
 
 Conflicts: libxorg-x11-static-devel < 7.0
 
-%description -n %{libxext}-static-devel
+%description -n %{staticname}
 Static development files for %{name}
 
-%files -n %{libxext}-static-devel
+%files -n %{staticname}
 %defattr(-,root,root)
 %{_libdir}/libXext.a
 
@@ -97,8 +104,8 @@ Static development files for %{name}
 %setup -q -n libXext-%{version}
 
 %build
-autoreconf -fi
 %configure2_5x
+
 %make
 
 %install
