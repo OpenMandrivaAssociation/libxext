@@ -6,7 +6,7 @@ Name: libxext
 Summary: X11 miscellaneous extension library
 Epoch: 1
 Version: 1.3.0
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
@@ -61,7 +61,7 @@ Summary: Development files for %{name}
 Group: Development/X11
 Requires: %{libxext} = %{epoch}:%{version}-%{release}
 Requires: x11-proto-devel >= 7.5
-Provides: libxext-devel = %{version}-%{release}
+Provides: libxext-devel = %{epoch}:%{version}-%{release}
 Provides: libxext6-devel = %{version}-%{release}
 Obsoletes: %{mklibname xext6}-devel
 
