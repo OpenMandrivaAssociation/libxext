@@ -5,8 +5,8 @@
 Name: libxext
 Summary: X11 miscellaneous extension library
 Epoch: 1
-Version: 1.3.0
-Release: 3
+Version: 1.3.1
+Release: 1
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
