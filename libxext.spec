@@ -5,8 +5,8 @@
 Name:		libxext
 Summary:	X11 miscellaneous extension library
 Epoch:		1
-Version:	1.3.1
-Release:	3
+Version:	1.3.2
+Release:	1
 Group:		Development/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
@@ -19,7 +19,7 @@ BuildRequires:	x11-proto-devel >= 7.5
 BuildRequires:	x11-util-macros >= 1.0.1
 
 %description
-Misc X Extension Library
+Misc X Extension Library.
 
 %package -n %{libxext}
 Summary:	X11 miscellaneous extension library
@@ -29,8 +29,8 @@ Provides:	%{name} = %{EVRD}
 
 %description -n %{libxext}
 LibXext provides an X Window System client interface to several extensions to
-the X protocol. 
-The supported protocol extensions are: 
+the X protocol.
+The supported protocol extensions are:
 - DOUBLE-BUFFER (DBE), the Double Buffer extension;
 - DPMS, the VESA Display Power Management System extension;
 - Extended-Visual-Information (EVI), an extension for gathering extra
@@ -63,7 +63,7 @@ Conflicts:	libxorg-x11-devel < 7.0
 Conflicts:	x11-proto-devel < 7.5
 
 %description -n %{develname}
-Development files for %{name}
+Development files for %{name}.
 
 %prep
 %setup -qn libXext-%{version}
@@ -75,9 +75,8 @@ Development files for %{name}
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-rm -rf %{buildroot}%_datadir/doc/libXext
+rm -rf %{buildroot}%{_datadir}/doc/libXext
 
 %files -n %{libxext}
 %{_libdir}/libXext.so.%{major}*
