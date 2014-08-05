@@ -5,8 +5,8 @@
 Summary:	X11 miscellaneous extension library
 Name:		libxext
 Epoch:		1
-Version:	1.3.2
-Release:	9
+Version:	1.3.3
+Release:	1
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
@@ -63,7 +63,7 @@ Development files for %{name}.
 %setup -qn libXext-%{version}
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 
 %make
