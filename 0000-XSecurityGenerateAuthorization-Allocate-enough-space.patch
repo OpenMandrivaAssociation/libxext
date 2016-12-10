@@ -1,0 +1,31 @@
+From 0744837f525d8ba103e807af7c44ad2bf5cbd6ca Mon Sep 17 00:00:00 2001
+From: Rob Wu <rob@robwu.nl>
+Date: Thu, 25 Feb 2016 18:05:50 +0100
+Subject: [PATCH 0/3] XSecurityGenerateAuthorization: Allocate enough space in
+ values buffer
+
+https://bugs.freedesktop.org/show_bug.cgi?id=94292
+
+Reviewed-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+Reviewed-by: Seth Arnold <seth.arnold@canonical.com>
+Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+---
+ src/XSecurity.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/XSecurity.c b/src/XSecurity.c
+index 73305a3..d0a68d2 100644
+--- a/src/XSecurity.c
++++ b/src/XSecurity.c
+@@ -217,7 +217,7 @@ XSecurityGenerateAuthorization(
+     register xSecurityGenerateAuthorizationReq *req;
+     xSecurityGenerateAuthorizationReply rep;
+     Xauth *auth_return;
+-    unsigned long values[3];
++    unsigned long values[4];
+     unsigned long *value = values;
+     unsigned int nvalues;
+ 
+-- 
+2.8.3
+

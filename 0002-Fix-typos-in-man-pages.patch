@@ -1,0 +1,40 @@
+From 54ba591149f3a92c5a4a66e428ae2a33d1027053 Mon Sep 17 00:00:00 2001
+From: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date: Thu, 25 Feb 2016 15:34:45 -0800
+Subject: [PATCH 2/3] Fix typos in man pages
+
+Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+---
+ man/DBE.man             | 2 +-
+ man/DPMSSetTimeouts.man | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/man/DBE.man b/man/DBE.man
+index 5ed34c2..6e3d71f 100644
+--- a/man/DBE.man
++++ b/man/DBE.man
+@@ -218,7 +218,7 @@ applications may need a richer set of swap actions than DBE provides.  Some
+ DBE implementations have knowledge of ancillary buffers, and/or can provide
+ a rich set of swap actions. Instead of continually extending DBE to increase
+ its set of swap actions, DBE provides a flexible "idiom" mechanism.  If an
+-applications's needs are served by the defined swap actions, it should use
++application's needs are served by the defined swap actions, it should use
+ them; otherwise, it should use the following method of expressing a complex
+ swap action as an idiom.  Following this policy will ensure the best possible
+ performance across a wide variety of implementations.
+diff --git a/man/DPMSSetTimeouts.man b/man/DPMSSetTimeouts.man
+index bf8f17f..9c988c4 100644
+--- a/man/DPMSSetTimeouts.man
++++ b/man/DPMSSetTimeouts.man
+@@ -95,7 +95,7 @@ monitor.  As noted above, many
+ monitors implement this mode identical to the standby mode.  A value of zero
+ disables this mode.
+ .LP
+-The value \fIoff\fP is the amount of time of inactivity,in seconds, before the
++The value \fIoff\fP is the amount of time of inactivity, in seconds, before the
+ third and final level of power
+ savings is invoked. Off mode's physical and electrical characteristics are
+ implementation defined. In DPMS
+-- 
+2.8.3
+
