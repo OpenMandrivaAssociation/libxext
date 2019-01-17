@@ -2,11 +2,13 @@
 %define libxext %mklibname xext %{major}
 %define devname %mklibname xext -d
 
+%global optflags %{optflags} -O3
+
 Summary:	X11 miscellaneous extension library
 Name:		libxext
 Epoch:		1
 Version:	1.3.3
-Release:	7
+Release:	8
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
@@ -63,17 +65,16 @@ Provides:	libxext-devel = %{EVRD}
 Development files for %{name}.
 
 %prep
-%setup -qn libXext-%{version}
-%apply_patches
+%autosetup -n libXext-%{version} -p1
 
 %build
 %configure \
 	--disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 rm -rf %{buildroot}%{_datadir}/doc/libXext
 
 %files -n %{libxext}
