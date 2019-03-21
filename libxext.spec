@@ -13,10 +13,6 @@ Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-Patch0:		0000-XSecurityGenerateAuthorization-Allocate-enough-space.patch
-Patch1:		0001-Assert-that-values-buffer-has-enough-room-for-provid.patch
-Patch2:		0002-Fix-typos-in-man-pages.patch
-Patch3:		0003-Use-__builtin_popcountl-if-available-to-replace-Ones.patch
 BuildRequires:	pkgconfig(x11) >= 1.0.0
 BuildRequires:	pkgconfig(xau) >= 1.0.0
 BuildRequires:	pkgconfig(xdmcp) >= 1.0.0
