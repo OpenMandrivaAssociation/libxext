@@ -23,12 +23,12 @@
 Summary:	X11 miscellaneous extension library
 Name:		libxext
 Epoch:		1
-Version:	1.3.4
-Release:	2
+Version:	1.3.5
+Release:	1
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.xz
 BuildRequires:	pkgconfig(x11) >= 1.0.0
 BuildRequires:	pkgconfig(xau) >= 1.0.0
 BuildRequires:	pkgconfig(xdmcp) >= 1.0.0
@@ -155,7 +155,7 @@ rm -rf %{buildroot}%{_datadir}/doc/libXext
 %{_libdir}/libXext.so
 %{_libdir}/pkgconfig/xext.pc
 %{_includedir}/X11/extensions/*.h
-%{_mandir}/man3/*.3*
+%doc %{_mandir}/man3/*.3*
 
 %if %{with compat32}
 %files -n %{lib32xext}
