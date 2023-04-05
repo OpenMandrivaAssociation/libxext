@@ -132,7 +132,10 @@ cd ..
 
 mkdir build
 cd build
-CFLAGS="%{optflags} -flto" LDFLAGS="%{optflags} -flto" %configure
+CFLAGS="%{optflags} -flto" LDFLAGS="%{optflags} -flto" %configure \
+%if %{cross_compiling}
+	--disable-malloc0returnsnull
+%endif
 
 %build
 %if %{with compat32}
