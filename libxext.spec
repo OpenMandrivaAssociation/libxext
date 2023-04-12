@@ -35,6 +35,7 @@ BuildRequires:	pkgconfig(xdmcp) >= 1.0.0
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xproto)
 %if %{with compat32}
+BuildRequires:	libc6
 BuildRequires:	devel(libX11)
 BuildRequires:	devel(libXau)
 BuildRequires:	devel(libXdmcp)
@@ -121,7 +122,7 @@ Development files for %{name}.
 
 %prep
 %autosetup -n libXext-%{version} -p1
-export CONFIGURE_TOP="`pwd`"
+export CONFIGURE_TOP="$(pwd)"
 
 %if %{with compat32}
 mkdir build32
