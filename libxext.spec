@@ -23,7 +23,7 @@
 Summary:	X11 miscellaneous extension library
 Name:		libxext
 Epoch:		1
-Version:	1.3.6
+Version:	1.3.7
 Release:	1
 Group:		Development/X11
 License:	MIT
